@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: steps name
-        run: echo ${{ github.event.commits[0].message }}
+        run: echo "$(git show -s --format=%s)"
